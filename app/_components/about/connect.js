@@ -36,13 +36,13 @@ export default function Connect() {
     });
   };
   return (
-    <div className="pt-20 flex justify-between">
-      <div className="w-1/2">
-        <h1 className="text-2xl font-medium tracking-wide pb-4">
+    <div className="pt-20 flex flex-col gap-8 md:flex-row md:gap-0 md:justify-between">
+      <div className="md:w-1/2">
+        <h1 className="text-base md:text-2xl md:font-medium tracking-wide pb-3 md:pb-4">
           let&apos;s connect
         </h1>
         <div className="flex flex-col gap-1">
-          <p className="text-sm ">
+          <p className="text-xs font-medium md:font-normal md:text-sm ">
             Say hello at{" "}
             <Link
               href="mailto:example@example.com"
@@ -51,7 +51,7 @@ export default function Connect() {
               raviinainn@gmail.com
             </Link>
           </p>
-          <p className="text-sm">
+          <p className="text-xs font-medium md:font-normal md:text-sm">
             For more info, here&apos;s my{" "}
             <span onClick={downloadPdf} className="underline cursor-pointer">
               resume
@@ -60,8 +60,8 @@ export default function Connect() {
           </p>
         </div>
       </div>
-      <div className="w-1/2">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+      <div className="md:w-1/2">
+        <form onSubmit={handleSubmit} className=" flex flex-col gap-8">
           <div className="flex flex-col gap-1">
             <label className="text-xs font-normal" htmlFor="name">
               NAME *
