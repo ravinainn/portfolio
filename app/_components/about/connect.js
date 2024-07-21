@@ -39,7 +39,7 @@ export default function Connect() {
     <div className="pt-20 flex justify-between">
       <div className="w-1/2">
         <h1 className="text-2xl font-medium tracking-wide pb-4">
-          let's connect
+          let&apos;s connect
         </h1>
         <div className="flex flex-col gap-1">
           <p className="text-sm ">
@@ -52,7 +52,7 @@ export default function Connect() {
             </Link>
           </p>
           <p className="text-sm">
-            For more info, here's my{" "}
+            For more info, here&apos;s my{" "}
             <span onClick={downloadPdf} className="underline cursor-pointer">
               resume
             </span>
