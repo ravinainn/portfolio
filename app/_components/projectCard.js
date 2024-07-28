@@ -18,8 +18,10 @@ export default function ProjectCard() {
         <Image className="" src={urlImg} alt="Uifry" />
         <div className="absolute bg-black opacity-0 group-hover:opacity-70 rounded-lg top-0 w-full h-full p-10 z-20"></div>
         <h4 className="text-lg font-semibold text-white top-0 absolute p-10 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-100">
-          Uifry <br />
-          <span className="text-base font-medium ">single page website</span>
+          URL Shortener <br />
+          <span className="text-base font-medium ">
+            Generate short url for long urls
+          </span>
         </h4>
       </div>
     </div>
