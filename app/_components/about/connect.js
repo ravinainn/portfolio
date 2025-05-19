@@ -1,4 +1,5 @@
 "use client";
+import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import { useState } from "react";
 // import pdfFilePath from "../../_assets/Ravi_Resume.pdf";
@@ -24,6 +25,13 @@ export default function Connect() {
       ...prevState,
       [name]: value,
     }));
+  };
+  const onClickResume = () => {
+    console.log("resume click");
+    window.open(
+      "https://drive.google.com/file/d/14McfKWnau6n9taZ2dEIqOsrcbRFx2r1O/view?usp=sharing",
+      "_blank"
+    );
   };
 
   const handleSubmit = (e) => {
@@ -53,7 +61,7 @@ export default function Connect() {
           </p>
           <p className="text-xs font-medium md:font-normal md:text-sm">
             For more info, here&apos;s my{" "}
-            <span onClick={downloadPdf} className="underline cursor-pointer">
+            <span onClick={onClickResume} className="underline cursor-pointer">
               resume
             </span>
             .

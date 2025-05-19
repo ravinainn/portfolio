@@ -6,9 +6,6 @@ export default function Hero() {
         efficient software solutions.
       </h4>
       <p className="text-xs md:text-base pb-8">Currently @ Ai-Shala </p>
-      <button className="text-sm font-semibold hover:font-medium bg-neutral-700 hover:bg-black hover:black rounded-3xl text-white px-8 py-2 ">
-        let&apos;s connect
-      </button>
     </div>
   );
 }
