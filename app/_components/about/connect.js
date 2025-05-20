@@ -1,7 +1,7 @@
 "use client";
+import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import { useState } from "react";
-// import pdfFilePath from "../../_assets/Ravi_Resume.pdf";
 
 export default function Connect() {
   const [formData, setFormData] = useState({
@@ -9,14 +9,6 @@ export default function Connect() {
     email: "",
     message: "",
   });
-  const downloadPdf = () => {
-    const link = document.createElement("a");
-    link.href = pdfFilePath;
-    link.download = "RaviResume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +16,13 @@ export default function Connect() {
       ...prevState,
       [name]: value,
     }));
+  };
+  const onClickResume = () => {
+    console.log("resume click");
+    window.open(
+      "https://drive.google.com/file/d/14McfKWnau6n9taZ2dEIqOsrcbRFx2r1O/view?usp=sharing",
+      "_blank"
+    );
   };
 
   const handleSubmit = (e) => {
@@ -37,7 +36,7 @@ export default function Connect() {
   };
   return (
     <div className="pt-20 flex flex-col gap-8 md:flex-row md:gap-0 md:justify-between">
-      <div className="md:w-1/2">
+      <div className="md:w-2/5">
         <h1 className="text-base md:text-2xl md:font-medium tracking-wide pb-3 md:pb-4">
           let&apos;s connect
         </h1>
@@ -53,14 +52,20 @@ export default function Connect() {
           </p>
           <p className="text-xs font-medium md:font-normal md:text-sm">
             For more info, here&apos;s my{" "}
-            <span onClick={downloadPdf} className="underline cursor-pointer">
+            <span
+              onClick={() => {
+                onClickResume;
+              }}
+              role="button"
+              className="underline cursor-pointer"
+            >
               resume
             </span>
             .
           </p>
         </div>
       </div>
-      <div className="md:w-1/2">
+      <div className="md:w-3/5">
         <form onSubmit={handleSubmit} className=" flex flex-col gap-8">
           <div className="flex flex-col gap-1">
             <label className="text-xs font-normal" htmlFor="name">
