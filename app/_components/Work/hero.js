@@ -5,7 +5,9 @@ export default function Hero() {
         hello! i&apos;m a software development engineer building powerful and
         efficient software solutions.
       </h4>
-      <p className="text-xs md:text-base pb-8">Currently @ Ai-Shala </p>
+      <p className="text-xs md:text-base pb-8">
+        Currently @ Veersa Technologies
+      </p>
     </div>
   );
 }

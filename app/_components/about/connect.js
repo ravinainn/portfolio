@@ -2,7 +2,6 @@
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import { useState } from "react";
-// import pdfFilePath from "../../_assets/Ravi_Resume.pdf";
 
 export default function Connect() {
   const [formData, setFormData] = useState({
@@ -10,14 +9,6 @@ export default function Connect() {
     email: "",
     message: "",
   });
-  const downloadPdf = () => {
-    const link = document.createElement("a");
-    link.href = pdfFilePath;
-    link.download = "RaviResume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -61,7 +52,13 @@ export default function Connect() {
           </p>
           <p className="text-xs font-medium md:font-normal md:text-sm">
             For more info, here&apos;s my{" "}
-            <span onClick={onClickResume} className="underline cursor-pointer">
+            <span
+              onClick={() => {
+                onClickResume;
+              }}
+              role="button"
+              className="underline cursor-pointer"
+            >
               resume
             </span>
             .
