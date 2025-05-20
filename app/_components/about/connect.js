@@ -45,7 +45,7 @@ export default function Connect() {
   };
   return (
     <div className="pt-20 flex flex-col gap-8 md:flex-row md:gap-0 md:justify-between">
-      <div className="md:w-1/2">
+      <div className="md:w-2/5">
         <h1 className="text-base md:text-2xl md:font-medium tracking-wide pb-3 md:pb-4">
           let&apos;s connect
         </h1>
@@ -68,7 +68,7 @@ export default function Connect() {
           </p>
         </div>
       </div>
-      <div className="md:w-1/2">
+      <div className="md:w-3/5">
         <form onSubmit={handleSubmit} className=" flex flex-col gap-8">
           <div className="flex flex-col gap-1">
             <label className="text-xs font-normal" htmlFor="name">

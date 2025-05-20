@@ -1,16 +1,15 @@
 import React from "react";
 
-const EducationDetail = () => {
+const EducationDetail = ({ school, location, course, marks, batch }) => {
   return (
     <div>
       <h4 className="text-sm font-medium text-gray-900">
-        <span className="">Guru Gobind Singh Indraprastha University</span> •{" "}
-        <span>Delhi</span>
+        <span className="">{school}</span> • <span>{location}</span>
       </h4>
       <p className="text-sm text-gray-500 font-normal">
-        Bachelor of Technology in CSE - <span>9.1 CGPA</span>
+        {course} - <span className="text-gray-900 font-medium">{marks}</span>
       </p>
-      <p className="text-sm text-gray-500 font-normal">2021-2025</p>
+      <p className="text-sm text-gray-500 font-normal">{batch}</p>
     </div>
   );
 };
